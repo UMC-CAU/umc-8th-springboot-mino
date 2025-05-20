@@ -1,6 +1,13 @@
+
 spring:
   application:
     name: umc-8th
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+  profiles:
+    active: dev
 
   datasource:
     driver-class-name: org.postgresql.Driver
@@ -20,3 +27,5 @@ spring:
           auto: create
         default_batch_fetch_size: 1000
 
+webhook:
+  url: https://discord.com/api/webhooks/1372510333482303560/UTPQ99Wm6ZElCt1ho1r5uieIMZXogGAMgbiLAuyH7PBJUWbEiUaSYQNpKf8bP4x26xP1
