@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.client.RestTemplate;
 
 import jakarta.servlet.http.HttpServletRequest;
+import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
