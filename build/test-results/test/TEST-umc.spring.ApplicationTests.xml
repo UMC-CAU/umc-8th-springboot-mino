@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="umc.spring.ApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-05-07T14:49:45.950Z" hostname="songminhyeog-ui-MacBookPro.local" time="0.253">
+  <properties/>
+  <testcase name="contextLoads()" classname="umc.spring.ApplicationTests" time="0.253"/>
+  <system-out><![CDATA[23:49:44.138 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [umc.spring.ApplicationTests]: ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:49:44.186 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration umc.spring.Application for test class umc.spring.ApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.4)
+
+2025-05-07T23:49:44.357+09:00  INFO 68066 --- [umc-8th] [    Test worker] umc.spring.ApplicationTests              : Starting ApplicationTests using Java 17.0.14 with PID 68066 (started by songminhyuk in /Users/songminhyuk/Dev/JAVA/umc-8th-springboot-mino)
+2025-05-07T23:49:44.358+09:00  INFO 68066 --- [umc-8th] [    Test worker] umc.spring.ApplicationTests              : No active profile set, falling back to 1 default profile: "default"
+2025-05-07T23:49:44.602+09:00  INFO 68066 --- [umc-8th] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-07T23:49:44.625+09:00  INFO 68066 --- [umc-8th] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 1 JPA repository interface.
+2025-05-07T23:49:44.832+09:00  INFO 68066 --- [umc-8th] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-07T23:49:44.849+09:00  INFO 68066 --- [umc-8th] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.0.2.Final
+2025-05-07T23:49:44.899+09:00  WARN 68066 --- [umc-8th] [    Test worker] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2025-05-07T23:49:44.933+09:00  INFO 68066 --- [umc-8th] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-07T23:49:44.975+09:00  INFO 68066 --- [umc-8th] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4fa5cc73
+2025-05-07T23:49:44.976+09:00  INFO 68066 --- [umc-8th] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-07T23:49:44.988+09:00  INFO 68066 --- [umc-8th] [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2025-05-07T23:49:45.100+09:00  INFO 68066 --- [umc-8th] [    Test worker] o.h.c.beanvalidation.TypeSafeActivator   : Error calling `jakarta.validation.Validation#buildDefaultValidatorFactory`
+
+jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+	at jakarta.validation.Validation$GenericBootstrapImpl.configure(Validation.java:291) ~[jakarta.validation-api-3.0.2.jar:na]
+	at jakarta.validation.Validation.buildDefaultValidatorFactory(Validation.java:103) ~[jakarta.validation-api-3.0.2.jar:na]
+	at org.hibernate.cfg.beanvalidation.TypeSafeActivator.getValidatorFactory(TypeSafeActivator.java:479) ~[hibernate-core-6.0.2.Final.jar:6.0.2.Final]
+	at org.hibernate.cfg.beanvalidation.TypeSafeActivator.activate(TypeSafeActivator.java:82) ~[hibernate-core-6.0.2.Final.jar:6.0.2.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.hibernate.cfg.beanvalidation.BeanValidationIntegrator.integrate(BeanValidationIntegrator.java:137) ~[hibernate-core-6.0.2.Final.jar:6.0.2.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:284) ~[hibernate-core-6.0.2.Final.jar:6.0.2.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415) ~[hibernate-core-6.0.2.Final.jar:6.0.2.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1425) ~[hibernate-core-6.0.2.Final.jar:6.0.2.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1859) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:347) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.5.jar:6.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:144) ~[spring-boot-test-3.4.4.jar:3.4.4]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.2.5.jar:6.2.5]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461) ~[spring-boot-3.4.4.jar:3.4.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:563) ~[spring-boot-test-3.4.4.jar:3.4.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:144) ~[spring-boot-test-3.4.4.jar:3.4.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:110) ~[spring-boot-test-3.4.4.jar:3.4.4]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:200) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:139) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:160) ~[spring-test-6.2.5.jar:6.2.5]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$12(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$7(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$6(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$1(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) ~[na:na]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) ~[na:na]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92) ~[na:na]
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63) ~[na:na]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71) ~[na:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
+
+Hibernate: 
+    
+    alter table if exists alarm_log 
+       drop constraint if exists FKjgv4ufy6s45yjp339h3smlcu6
+Hibernate: 
+    
+    alter table if exists inquiry_img 
+       drop constraint if exists FK5l7yfyr78mnfj6gv7sejy8hnh
+Hibernate: 
+    
+    alter table if exists member_food_category 
+       drop constraint if exists FKnaecaofur7yyxbrvt34pfg8w2
+Hibernate: 
+    
+    alter table if exists member_food_category 
+       drop constraint if exists FKt4uv7jt3p8e2qs3tsl0p5ntc1
+Hibernate: 
+    
+    alter table if exists member_inquiry 
+       drop constraint if exists FK7c17qiugv9e9ub2lk3b04sppf
+Hibernate: 
+    
+    alter table if exists member_mission 
+       drop constraint if exists FKpgw7uojmq1tkna2ubpxmhlyuo
+Hibernate: 
+    
+    alter table if exists member_mission 
+       drop constraint if exists FKibnub11mc8k2g39v44smt9jqi
+Hibernate: 
+    
+    alter table if exists member_term 
+       drop constraint if exists FKrtih56dvkore774vnao4lglic
+Hibernate: 
+    
+    alter table if exists member_term 
+       drop constraint if exists FK99valiqden00uing9dy6221uy
+Hibernate: 
+    
+    alter table if exists mission 
+       drop constraint if exists FKgae6qenatvwyoxwh163hm1sp
+Hibernate: 
+    
+    alter table if exists reply 
+       drop constraint if exists FKd5ckwt38d4ibe84wlfc3o8jw8
+Hibernate: 
+    
+    alter table if exists restaurant 
+       drop constraint if exists FKc4sxpit9h5sf97l9tvb7xo3wr
+Hibernate: 
+    
+    alter table if exists restaurant 
+       drop constraint if exists FK8k7xb41gr34h06e87bfydlkaf
+Hibernate: 
+    
+    alter table if exists review 
+       drop constraint if exists FKk0ccx5i4ci2wd70vegug074w1
+Hibernate: 
+    
+    alter table if exists review 
+       drop constraint if exists FK70ry7cuti298yxet366rynxch
+Hibernate: 
+    
+    alter table if exists review_img 
+       drop constraint if exists FKrxhqwnmvx8w249ll5lwty7g5k
+Hibernate: 
+    
+    drop table if exists alarm_log cascade
+Hibernate: 
+    
+    drop table if exists food_category cascade
+Hibernate: 
+    
+    drop table if exists inquiry_img cascade
+Hibernate: 
+    
+    drop table if exists member cascade
+Hibernate: 
+    
+    drop table if exists member_food_category cascade
+Hibernate: 
+    
+    drop table if exists member_inquiry cascade
+Hibernate: 
+    
+    drop table if exists member_mission cascade
+Hibernate: 
+    
+    drop table if exists member_term cascade
+Hibernate: 
+    
+    drop table if exists mission cascade
+Hibernate: 
+    
+    drop table if exists reply cascade
+Hibernate: 
+    
+    drop table if exists restaurant cascade
+Hibernate: 
+    
+    drop table if exists review cascade
+Hibernate: 
+    
+    drop table if exists review_img cascade
+Hibernate: 
+    
+    drop table if exists state cascade
+Hibernate: 
+    
+    drop table if exists term cascade
+Hibernate: 
+    
+    create table alarm_log (
+       id bigserial not null,
+        created_at timestamp(6),
+        updated_at timestamp(6),
+        message TEXT,
+        restaurant_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table food_category (
+       id bigserial not null,
+        created_at timestamp(6),
+        updated_at timestamp(6),
+        name varchar(20),
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table inquiry_img (
+       id bigserial not null,
+        created_at timestamp(6),
+        updated_at timestamp(6),
+        url varchar(255) not null,
+        inquiry_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table member (
+       id bigserial not null,
+        created_at timestamp(6),
+        updated_at timestamp(6),
+        address varchar(100),
+        birth date,
+        email varchar(50),
+        gender boolean,
+        is_certificated boolean,
+        login_type varchar(255),
+        name varchar(10),
+        status varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table member_food_category (
+       id bigserial not null,
+        created_at timestamp(6),
+        updated_at timestamp(6),
+        food_category_id bigint,
+        member_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table member_inquiry (
+       id bigserial not null,
+        created_at timestamp(6),
+        updated_at timestamp(6),
+        body TEXT,
+        status varchar(255),
+        title varchar(50) not null,
+        member_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table member_mission (
+       id bigserial not null,
+        created_at timestamp(6),
+        updated_at timestamp(6),
+        status varchar(255),
+        member_id bigint,
+        mission_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table member_term (
+       id bigserial not null,
+        created_at timestamp(6),
+        updated_at timestamp(6),
+        id_agreed boolean,
+        member_id bigint,
+        term_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table mission (
+       id bigserial not null,
+        created_at timestamp(6),
+        updated_at timestamp(6),
+        expiration_at timestamp(6) not null,
+        reward integer,
+        target_money integer,
+        restaurant_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table reply (
+       id bigserial not null,
+        created_at timestamp(6),
+        updated_at timestamp(6),
+        body TEXT,
+        review_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table restaurant (
+       id bigserial not null,
+        created_at timestamp(6),
+        updated_at timestamp(6),
+        address varchar(100) not null,
+        latitude float(24),
+        longitude float(24),
+        name varchar(20) not null,
+        score integer,
+        food_category_id bigint,
+        state_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table review (
+       id bigserial not null,
+        created_at timestamp(6),
+        updated_at timestamp(6),
+        body TEXT,
+        score integer,
+        member_id bigint,
+        restaurant_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table review_img (
+       id bigserial not null,
+        created_at timestamp(6),
+        updated_at timestamp(6),
+        url varchar(255) not null,
+        review_id bigint,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table state (
+       id bigserial not null,
+        created_at timestamp(6),
+        updated_at timestamp(6),
+        name varchar(20) not null,
+        primary key (id)
+    )
+Hibernate: 
+    
+    create table term (
+       id bigserial not null,
+        created_at timestamp(6),
+        updated_at timestamp(6),
+        description varchar(255) not null,
+        title varchar(20) not null,
+        type boolean not null,
+        primary key (id)
+    )
+Hibernate: 
+    
+    alter table if exists alarm_log 
+       add constraint FKjgv4ufy6s45yjp339h3smlcu6 
+       foreign key (restaurant_id) 
+       references restaurant
+Hibernate: 
+    
+    alter table if exists inquiry_img 
+       add constraint FK5l7yfyr78mnfj6gv7sejy8hnh 
+       foreign key (inquiry_id) 
+       references member_inquiry
+Hibernate: 
+    
+    alter table if exists member_food_category 
+       add constraint FKnaecaofur7yyxbrvt34pfg8w2 
+       foreign key (food_category_id) 
+       references food_category
+Hibernate: 
+    
+    alter table if exists member_food_category 
+       add constraint FKt4uv7jt3p8e2qs3tsl0p5ntc1 
+       foreign key (member_id) 
+       references member
+Hibernate: 
+    
+    alter table if exists member_inquiry 
+       add constraint FK7c17qiugv9e9ub2lk3b04sppf 
+       foreign key (member_id) 
+       references member
+Hibernate: 
+    
+    alter table if exists member_mission 
+       add constraint FKpgw7uojmq1tkna2ubpxmhlyuo 
+       foreign key (member_id) 
+       references member
+Hibernate: 
+    
+    alter table if exists member_mission 
+       add constraint FKibnub11mc8k2g39v44smt9jqi 
+       foreign key (mission_id) 
+       references mission
+Hibernate: 
+    
+    alter table if exists member_term 
+       add constraint FKrtih56dvkore774vnao4lglic 
+       foreign key (member_id) 
+       references member
+Hibernate: 
+    
+    alter table if exists member_term 
+       add constraint FK99valiqden00uing9dy6221uy 
+       foreign key (term_id) 
+       references term
+Hibernate: 
+    
+    alter table if exists mission 
+       add constraint FKgae6qenatvwyoxwh163hm1sp 
+       foreign key (restaurant_id) 
+       references restaurant
+Hibernate: 
+    
+    alter table if exists reply 
+       add constraint FKd5ckwt38d4ibe84wlfc3o8jw8 
+       foreign key (review_id) 
+       references review
+Hibernate: 
+    
+    alter table if exists restaurant 
+       add constraint FKc4sxpit9h5sf97l9tvb7xo3wr 
+       foreign key (food_category_id) 
+       references food_category
+Hibernate: 
+    
+    alter table if exists restaurant 
+       add constraint FK8k7xb41gr34h06e87bfydlkaf 
+       foreign key (state_id) 
+       references state
+Hibernate: 
+    
+    alter table if exists review 
+       add constraint FKk0ccx5i4ci2wd70vegug074w1 
+       foreign key (member_id) 
+       references member
+Hibernate: 
+    
+    alter table if exists review 
+       add constraint FK70ry7cuti298yxet366rynxch 
+       foreign key (restaurant_id) 
+       references restaurant
+Hibernate: 
+    
+    alter table if exists review_img 
+       add constraint FKrxhqwnmvx8w249ll5lwty7g5k 
+       foreign key (review_id) 
+       references review
+2025-05-07T23:49:45.422+09:00  INFO 68066 --- [umc-8th] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-05-07T23:49:45.425+09:00  INFO 68066 --- [umc-8th] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-07T23:49:45.510+09:00  WARN 68066 --- [umc-8th] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-07T23:49:45.553+09:00  INFO 68066 --- [umc-8th] [    Test worker] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-05-07T23:49:45.944+09:00  INFO 68066 --- [umc-8th] [    Test worker] umc.spring.ApplicationTests              : Started ApplicationTests in 1.7 seconds (process running for 2.138)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

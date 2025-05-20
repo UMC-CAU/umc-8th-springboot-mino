@@ -1,0 +1,10 @@
+webhook:
+  url: https://discord.com/api/webhooks/1372510333482303560/UTPQ99Wm6ZElCt1ho1r5uieIMZXogGAMgbiLAuyH7PBJUWbEiUaSYQNpKf8bP4x26xP1
+
+spring:
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+  profiles:
+    active: dev
