@@ -12,6 +12,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import umc.spring.domain.FoodCategory;
 import umc.spring.domain.Member;
 import umc.spring.domain.Term;
@@ -32,7 +33,17 @@ public class MemberFoodCategory extends BaseEntity {
 	@JoinColumn(name = "member_id")
 	private Member member;
 
+	@Setter
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name = "food_category_id")
 	private FoodCategory foodCategory;
+
+	public void setMember(Member member) {
+		if(this.member !=null){
+			member.getFoodCategories().remove(this);
+		}
+		this.member=member;
+		member.getFoodCategories().add(this);
+	}
+
 }

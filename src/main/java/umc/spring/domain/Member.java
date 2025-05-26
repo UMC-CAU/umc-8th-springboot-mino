@@ -3,6 +3,10 @@ package umc.spring.domain;
 import java.time.LocalDate;
 import java.util.List;
 
+import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Convert;
@@ -13,12 +17,14 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import umc.spring.domain.common.BaseEntity;
+import umc.spring.domain.enums.Gender;
 import umc.spring.domain.enums.LoginType;
 import umc.spring.domain.enums.MemberStatus;
 import umc.spring.domain.mapping.MemberFoodCategory;
@@ -32,29 +38,40 @@ import umc.spring.domain.mapping.Review;
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
+@DynamicInsert
+@DynamicUpdate
 public class Member extends BaseEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(length = 10)
+	@Column(nullable = false,length = 10)
 	private String name;
 
-	private Boolean gender;
+	private Integer age;
+
+	private Gender gender;
 
 	private LocalDate birth;
 
 	@Enumerated(EnumType.STRING)
+	@Column(columnDefinition = "VARCHAR(15) DEFAULT 'ACTIVE'")
 	private MemberStatus status;
 
-	@Column(length = 100)
+	@Column(nullable = false,length = 100)
 	private String address;
+
+	@Column(nullable = false,length = 100)
+	private String specAddress;
 
 	@Column(length = 50)
 	private String email;
 
 	private Boolean isCertificated;
+
+	@ColumnDefault("0")
+	private Integer point;
 
 
 	@Enumerated(EnumType.STRING)
