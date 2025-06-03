@@ -40,6 +40,9 @@ public class MemberConverter {
 			.name(request.name())
 			.age(request.age())
 			.foodCategories(new ArrayList<>())
+			.email(request.email())
+			.password(request.password())
+			.role(request.role())
 			.build();
 	}
 

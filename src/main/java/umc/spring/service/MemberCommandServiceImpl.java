@@ -2,6 +2,7 @@ package umc.spring.service;
 
 import java.util.List;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
@@ -21,12 +22,17 @@ import umc.spring.repository.member.MemberRepository;
 @RequiredArgsConstructor
 @Transactional
 public class MemberCommandServiceImpl implements MemberCommandService{
+
+	private final PasswordEncoder passwordEncoder;
+
 	private final MemberRepository memberRepository;
 	private final FoodCategoryRepository foodCategoryRepository;
 
 	@Override
 	public Member joinMember(MemberRequestDTO.JoinDTO request) {
 		Member joinMember= MemberConverter.toMember(request);
+
+		joinMember.encodePassword(passwordEncoder.encode(request.password()));
 		List<FoodCategory> foodCategories=request.preferCategory().stream()
 			.map(category->{
 				return foodCategoryRepository.findById(category).orElseThrow(()-> new FoodCategoryHandler(

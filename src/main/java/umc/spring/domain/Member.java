@@ -27,6 +27,7 @@ import umc.spring.domain.common.BaseEntity;
 import umc.spring.domain.enums.Gender;
 import umc.spring.domain.enums.LoginType;
 import umc.spring.domain.enums.MemberStatus;
+import umc.spring.domain.enums.Role;
 import umc.spring.domain.mapping.MemberFoodCategory;
 import umc.spring.domain.mapping.MemberInquiry;
 import umc.spring.domain.mapping.MemberMission;
@@ -65,8 +66,14 @@ public class Member extends BaseEntity {
 	@Column(nullable = false,length = 100)
 	private String specAddress;
 
-	@Column(length = 50)
+	@Column(length = 50,unique = true, nullable = false)
 	private String email;
+
+	@Column(nullable = false)
+	private String password;
+
+	@Enumerated(EnumType.STRING)
+	private Role role;
 
 	private Boolean isCertificated;
 
@@ -92,4 +99,7 @@ public class Member extends BaseEntity {
 	@OneToMany(mappedBy = "member",cascade = CascadeType.ALL)
 	private List<MemberFoodCategory> foodCategories;
 
+	public void encodePassword(String encode) {
+		this.password = encode;
+	}
 }

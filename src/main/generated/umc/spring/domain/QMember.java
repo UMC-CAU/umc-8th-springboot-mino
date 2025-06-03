@@ -49,9 +49,13 @@ public class QMember extends EntityPathBase<Member> {
 
     public final StringPath name = createString("name");
 
+    public final StringPath password = createString("password");
+
     public final NumberPath<Integer> point = createNumber("point", Integer.class);
 
     public final ListPath<umc.spring.domain.mapping.Review, umc.spring.domain.mapping.QReview> reviews = this.<umc.spring.domain.mapping.Review, umc.spring.domain.mapping.QReview>createList("reviews", umc.spring.domain.mapping.Review.class, umc.spring.domain.mapping.QReview.class, PathInits.DIRECT2);
+
+    public final EnumPath<umc.spring.domain.enums.Role> role = createEnum("role", umc.spring.domain.enums.Role.class);
 
     public final StringPath specAddress = createString("specAddress");
 

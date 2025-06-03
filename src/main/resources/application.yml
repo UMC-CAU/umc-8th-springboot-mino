@@ -18,9 +18,9 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         show_sql: true
         format_sql: true
-        use_sql_comments: true
+        use_sql_comments: update
         hbm2ddl:
-          auto: update
+          auto: create
         default_batch_fetch_size: 1000
 
 webhook:
